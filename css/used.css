@@ -1,0 +1,33 @@
+.usedBox {
+  margin: 10px;
+  width: 80%;
+}
+.usedBox .list_box {
+  padding: 10px 15px;
+  border: 1px solid #e2e2e2;
+  border-top: none;
+}
+.usedBox .list_box td,
+.usedBox .list_box th {
+  text-align: center;
+}
+.usedBox .list_box .kh {
+  color: #ccc;
+  font-size: 12px;
+}
+.usedBox .list_box .price,
+.usedBox .list_box .date {
+  color: #ff0000;
+}
+.usedBox .padding_c {
+  padding: 10px 5px;
+}
+.layui-input-inline.reset_w {
+  width: 500px;
+}
+.layui-input-block.reset_m {
+  margin-left: 0;
+}
+.layui-input-block {
+  margin-left: 0;
+}

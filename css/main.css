@@ -1,0 +1,59 @@
+/*首页*/
+.layui-layout-admin .layui-header{background-color: #393D49;border-bottom: 5px solid #1AA094;}
+.head{float: left;display: block;margin-top: 10px;margin-left: 30px;text-align: center;}
+.head img{width: 80px;height: 80px;border-radius: 100%;}
+.head p{color: #c2c2c2;margin-top: 5px;}
+.personMsg{float: left;margin-left: 130px;margin-top: 10px;}
+.personMsg .title{overflow: hidden;color: #c2c2c2;padding-left:40px;}
+.personMsg .title span.name{font-weight: bold;font-size: 18px;color: #fff;}
+.personMsg .title span{margin-right: 30px;}
+.personMsg .title span em,.personMsg .title span{font-weight: bold;font-size: 14px;}
+.personMsg .title a{color: #c2c2c2;position: absolute;right: 50px;top: 14px;}
+.personMsg .content{overflow: hidden;margin-top: 20px;}
+.personMsg .content a{float: left;display: block;text-align: center;vertical-align: middle;color: #fff;padding: 12px 40px;position: relative;}
+.personMsg .content a:after{position: absolute;content: '';background-color: #c2c2c2;right: 0;top: 15px;height: 36px;width: 1px;}
+.personMsg .content a.lasta:after{width: 0;}
+.personMsg .content a em{color: #fff;font-weight: bold;font-size: 16px;}
+.personMsg .content a em.cash{color: #fff;}
+.personMsg .content a p{margin-top: 5px;font-size: 12px;}
+.layui-tab-content .layui-tab-item iframe{width: 100%;border: 0;height: 100%;}
+#dinner-home i.layui-icon {display: none;}
+.dinner-tab-box>.layui-tab-title .layui-this {color: white;background-color: #1AA094;}
+.layui-nav-tree li.layui-nav-item .layui-nav-child dd a {padding-left: 40px !important;padding-right: 0px;}
+.layui-nav i{font-size: 18px;margin-right: 10px;}
+/*后台首页*/
+.contain{padding-bottom: 20px;overflow: hidden;padding-top: 20px;background-color: #fff;}
+.main h1{font-size: 16px;line-height: 50px;padding-left: 20px;border-bottom: 1px solid #ebebeb;}
+.leftBar{float: left;width: 76%;}
+.leftBar form{margin-top: 20px;}
+.leftBar .layui-tab-title{border-color: #ebebeb;}
+.leftBar .layui-tab-card > .layui-tab-title li{margin: 0;}
+.leftBar .layui-form-item .layui-input-inline{width: 160px;}
+.leftBar .layui-btn+.layui-btn{margin-left: 5px;}
+.dataBox{margin-left: 20px;}
+.dataBox .layui-table th,.dataBox .layui-table td{text-align: center;}
+.noticeBar ul{border: 1px solid #ebebeb;padding: 10px;margin: 20px 0 10px 20px;min-height: 200px;}
+.noticeBar ul li{border-bottom: 1px solid #ebebeb;line-height: 40px;}
+.noticeBar ul li em{float: right;}
+.rightBar{float: right;width: 260px;}
+.rightBar .teamBar{position: relative;}
+.main .rightBar h1{padding-left: 0;}
+.rightBar .layui-form{position: absolute;right: 0;top: 6px;}
+.main .rightBar .layui-form-item .layui-input-inline{width: 120px;}
+.rightBar .teamBar ul{background-color: #393D49;color: #c2c2c2;padding: 10px;padding-top: 0;margin: 10px;}
+.rightBar .teamBar ul li{overflow: hidden;border-bottom: 1px solid #666;padding: 10px 0;}
+.rightBar .teamBar ul li img{float: left;width: 70px;margin-right: 10px;height: 70px;}
+.rightBar .teamBar ul li .notice{float: left;}
+.rightBar .teamBar ul li .notice h3{font-size: 15px;line-height: 1;color: #fff;font-weight: bold;}
+.rightBar .teamBar ul li .notice p{font-size: 13px;margin-top: 2px;}
+.rightBar .teamBar ul li .notice p em{color: #fff;font-weight: bold;}
+.dataBox .layui-tab-content{padding:10px 20px;}
+@media only screen and (min-width:768px ) {
+	.leftBar{float: left;width: 76%;}
+}
+@media only screen and (min-width:1200px ) {
+	.leftBar{float: left;width:78%;}
+}
+@media only screen and (min-width:1600px ) {
+	.leftBar{float: left;width:82%;}
+}

@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/layui.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/used.css">
+  <title>我房网</title>
+</head>
+
+<body>
+<div class="contain">
+  <div class="main">
+    <div class="usedBox">
+      <div class="layui-tab  layui-tab-card">
+        <ul class="layui-tab-title">
+          <li class="layui-this">私客</li>
+          <li>组别公客</li>
+          <li>区域公客</li>
+          <li>公司公客</li>
+          <li>合作客户</li>
+          <li>成交客户</li>
+          <li>无效客户</li>
+          <li>未审核</li>
+        </ul>
+        <div class="layui-tab-content">
+          <div class="layui-tab-item layui-show">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_01">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_02">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_03">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_04">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_05">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_06">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_07">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_08">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_09">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_10">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_11">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_12">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_13">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_14">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_15">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_16">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_17">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_18">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_19">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_20">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_21">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_22">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_23">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_24">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_25">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_26">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_27">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_28">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="layui-collapse">
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title"></h2>
+                <div class="layui-colla-content layui-show">
+                  <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">搜索 :</label>
+                        <div class="layui-input-inline reset_w">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="可搜索客户姓名、手机号、客户编号" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <div class="layui-input-block reset_m">
+                          <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户需求 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu" value="全部" title="全部">
+                        <input type="radio" name="xuqiu" value="一手房" title="一手房" checked>
+                        <input type="radio" name="xuqiu" value="二手房" title="二手房" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">客户等级 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu1" value="不限" title="不限">
+                        <input type="radio" name="xuqiu1" value="重要客户" title="重要客户" checked>
+                        <input type="radio" name="xuqiu1" value="近期看房" title="近期看房" checked>
+                        <input type="radio" name="xuqiu1" value="暂未确定" title="暂未确定" checked>
+                        <input type="radio" name="xuqiu1" value="看房客户" title="看房客户" checked>
+                        <input type="radio" name="xuqiu1" value="成交客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="退房客户" title="成交客户" checked>
+                        <input type="radio" name="xuqiu1" value="放弃客户" title="放弃客户" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">更新时间 :</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="xuqiu2" value="不限" title="不限">
+                        <input type="radio" name="xuqiu2" value="一天内更新" title="一天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="三天内更新" title="三天内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一周内更新" title="一周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="两周内更新" title="两周内更新" checked>
+                        <input type="radio" name="xuqiu2" value="一月内更新" title="一月内更新" checked>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">权属人 :</label>
+                        <div class="layui-input-inline">
+                          <select name="qushu" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">客户区域 :</label>
+                        <div class="layui-input-inline">
+                          <select name="khqy" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">其他条件 :</label>
+                        <div class="layui-input-inline">
+                          <select name="other" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">权属人0</option>
+                            <option value="1">权属人1</option>
+                            <option value="2">权属人2</option>
+                            <option value="3">权属人3</option>
+                            <option value="4">权属人4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <div class="layui-inline">
+                        <label class="layui-form-label">录入时间 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_29">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_30">
+                        </div>
+                      </div>
+                      <div class="layui-inline">
+                        <label class="layui-form-label">上次回访 :</label>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_31">
+                        </div>
+                        <div class="layui-form-mid">--</div>
+                        <div class="layui-input-inline">
+                          <input class="layui-input" id="date_32">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">功能操作 :</label>
+                      <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-warm layui-btn-radius">我的收藏</button>
+                        <button class="layui-btn layui-btn-normal layui-btn-radius">我的续客</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="list_box">
+              <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-danger">删除</button>
+                  </div>
+                  <div class="layui-inline">
+                    <label class="layui-form-label">客户处理 :</label>
+                    <div class="layui-input-inline ">
+                      <input type="text" name="khcl" required  lay-verify="required" placeholder="客户处理" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn layui-btn-normal">转移权属</button>
+                  </div>
+                  <div class="layui-inline">
+                    <div class="layui-input-inline ">
+                      <input type="text" name="zzfx" required  lay-verify="required" placeholder="转至分销" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-inline">
+                    <button class="layui-btn ">转移</button>
+                    <button class="layui-btn layui-btn-warm">收藏</button>
+                    <button class="layui-btn">续客</button>
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <table class="layui-table">
+                    <thead>
+                    <tr>
+                      <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" title="委托编号"></th>
+                      <th>客户姓名</th>
+                      <th>客户区域</th>
+                      <th>客户需求</th>
+                      <th>地段需求</th>
+                      <th>需求</th>
+                      <th>带看次数</th>
+                      <th>录入时间</th>
+                      <th>功能操作</th>
+                      <th>公客</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" lay-skin="primary" title="dq1111"></td>
+                      <td>文靖涛 <p class="kh">重要客户</p></td>
+                      <td>海南/海口</td>
+                      <td>二手</td>
+                      <td>龙华区</td>
+                      <td><p class="price">40-50万</p><p class="xuqiu">50-60㎡，1-2室 1-2厅</p></td>
+                      <td>4</td>
+                      <td>2019-09-11 16:00</td>
+                      <td>编辑</td>
+                      <td>私客 <span class="date">10天</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/layui.js"></script>
+<script type="text/javascript">
+  layui.use('layer', function() {
+    var $ = layui.jquery,
+      layer = layui.layer;
+  });
+  layui.use('laydate', function() {
+    var laydate = layui.laydate;
+    var start = {
+      min: laydate.now(),
+      max: '2099-06-16 23:59:59',
+      istoday: false,
+      choose: function(datas) {
+        end.min = datas; //开始日选好后，重置结束日的最小日期
+        end.start = datas //将结束日的初始值设定为开始日
+      }
+    };
+    var end = {
+      min: laydate.now(),
+      max: '2099-06-16 23:59:59',
+      istoday: false,
+      choose: function(datas) {
+        start.max = datas; //结束日选好后，重置开始日的最大日期
+      }
+    };
+    document.getElementById('date_01').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_02').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_03').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_04').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_05').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_06').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_07').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_08').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_09').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_10').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_11').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_12').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_13').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_14').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_15').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_16').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_17').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_18').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_19').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_20').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_21').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_22').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_23').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_24').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_25').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_26').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_27').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_28').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_29').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_30').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_31').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_32').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+    document.getElementById('date_01').onclick = function() {
+      start.elem = this;
+      laydate(start);
+    };
+    document.getElementById('date_02').onclick = function() {
+      end.elem = this;
+      laydate(end);
+    };
+  });
+
+
+  layui.use('element', function(){
+    var element = layui.element();
+  });
+  layui.use('form', function(){
+    var form = layui.form();
+
+    //监听提交
+    form.on('submit(formDemo)', function(data){
+      layer.msg(JSON.stringify(data.field));
+      return false;
+    });
+  });
+</script>
+<script type="text/javascript" src="/js/site.js"></script>
+</body>
+
+</html>

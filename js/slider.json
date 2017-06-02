@@ -1,0 +1,1047 @@
+{
+	"menus": {
+		"0": {
+			"id": "1",
+			"parent": null,
+			"order": "0",
+			"text": "首页",
+			"url": "/manage/index/index",
+			"data": {
+				"li_class": "",
+				"a_class": "Index-Home",
+				"i_class": "fa fa-home"
+			}
+		},
+		"1": {
+			"id": "2",
+			"parent": null,
+			"order": "1",
+			"text": "楼盘信息",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "User",
+				"i_class": "fa fa-house"
+			},
+			"children": [
+				{
+					"id": "28",
+					"parent": "2",
+					"order": "0",
+					"text": "楼盘列表",
+					"url": "/manage/building/buildingList",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}, {
+					"id": "29",
+					"parent": "2",
+					"order": "1",
+					"text": "招商信息",
+					"url": "/manage/user/resetPassword",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}, {
+					"id": "30",
+					"parent": "2",
+					"order": "2",
+					"text": "楼盘更新",
+					"url": "/manage/user/log",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}, {
+					"id": "27",
+					"parent": "2",
+					"order": "3",
+					"text": "楼盘详情页",
+					"url": "/manage/user/log",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"2": {
+			"id": "3",
+			"parent": null,
+			"order": "2",
+			"text": "分销管理",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-distribution"
+			},
+			"children": [
+				{
+					"id": "36",
+					"parent": "3",
+					"order": "0",
+					"text": "分销列表页",
+					"url": "",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "37",
+					"parent": "3",
+					"order": "1",
+					"text": "添加客户",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "38",
+					"parent": "3",
+					"order": "2",
+					"text": "客户详情页",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "39",
+					"parent": "3",
+					"order": "3",
+					"text": "客户报备",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "40",
+					"parent": "3",
+					"order": "4",
+					"text": "客户回访",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "41",
+					"parent": "3",
+					"order": "5",
+					"text": "看房安排",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "42",
+					"parent": "3",
+					"order": "6",
+					"text": "客服回访",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "43",
+					"parent": "3",
+					"order": "7",
+					"text": "互动用户",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "44",
+					"parent": "3",
+					"order": "8",
+					"text": "400来电",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "45",
+					"parent": "3",
+					"order": "9",
+					"text": "看房单",
+					"url": "/manage/user/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"3": {
+			"id": "4",
+			"parent": null,
+			"order": "3",
+			"text": "案场管理",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-field"
+			},
+			"children": [
+				{
+					"id": "46",
+					"parent": "4",
+					"order": "0",
+					"text": "客户列表",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "47",
+					"parent": "4",
+					"order": "1",
+					"text": "客户回访",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "48",
+					"parent": "4",
+					"order": "2",
+					"text": "看房安排",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "49",
+					"parent": "4",
+					"order": "3",
+					"text": "客服回访",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "50",
+					"parent": "4",
+					"order": "4",
+					"text": "客户报备",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "51",
+					"parent": "4",
+					"order": "5",
+					"text": "留言管理",
+					"url": "/manage/dataCount/count",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"4": {
+			"id": "5",
+			"parent": null,
+			"order": "4",
+			"text": "渠道管理",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-ditch"
+			},
+			"children": [
+				{
+					"id": "52",
+					"parent": "5",
+					"order": "0",
+					"text": "客户列表",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "53",
+					"parent": "5",
+					"order": "1",
+					"text": "添加客户",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "54",
+					"parent": "5",
+					"order": "2",
+					"text": "客户详情页",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "55",
+					"parent": "5",
+					"order": "3",
+					"text": "客户报备",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "56",
+					"parent": "5",
+					"order": "4",
+					"text": "带看列表",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "57",
+					"parent": "5",
+					"order": "5",
+					"text": "客户统计",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "58",
+					"parent": "5",
+					"order": "6",
+					"text": "客户回访",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "59",
+					"parent": "5",
+					"order": "7",
+					"text": "客服回访",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "60",
+					"parent": "5",
+					"order": "8",
+					"text": "代理商列表",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "61",
+					"parent": "5",
+					"order": "9",
+					"text": "代理商回访",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "62",
+					"parent": "5",
+					"order": "10",
+					"text": "黑名单列表",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "63",
+					"parent": "5",
+					"order": "11",
+					"text": "渠道服务点",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "64",
+					"parent": "5",
+					"order": "12",
+					"text": "投诉与建议",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "65",
+					"parent": "5",
+					"order": "13",
+					"text": "总权属回访",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "67",
+					"parent": "5",
+					"order": "15",
+					"text": "代理商人员列表",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "68",
+					"parent": "5",
+					"order": "16",
+					"text": "代理商简介",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "69",
+					"parent": "5",
+					"order": "17",
+					"text": "上门拜访",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "71",
+					"parent": "5",
+					"order": "19",
+					"text": "驻厂渠道",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "72",
+					"parent": "5",
+					"order": "20",
+					"text": "业务员通讯录",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "73",
+					"parent": "5",
+					"order": "21",
+					"text": "岛外拓展代理商",
+					"url": "/manage/travel/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"5": {
+			"id": "6",
+			"parent": null,
+			"order": "5",
+			"text": "二手房",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-second-house"
+			},
+			"children": [
+				{
+					"id": "101",
+					"parent": "6",
+					"order": "0",
+					"text": "二手房首页",
+					"url": "/manage/used_stage/index",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},
+				{
+					"id": "74",
+					"parent": "6",
+					"order": "1",
+					"text": "求购客户列表",
+					"url": "/manage/used_stage/qiugou_list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "75",
+					"parent": "6",
+					"order": "2",
+					"text": "求租客户列表",
+					"url": "/manage/used_stage/qiuzu_list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "76",
+					"parent": "6",
+					"order": "3",
+					"text": "出售房源列表",
+					"url": "/manage/used_stage/sale_list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "76",
+					"parent": "6",
+					"order": "4",
+					"text": "出租房源列表",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "78",
+					"parent": "6",
+					"order": "5",
+					"text": "出售委托",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "79",
+					"parent": "6",
+					"order": "6",
+					"text": "出租委托",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "80",
+					"parent": "6",
+					"order": "7",
+					"text": "400来电",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "82",
+					"parent": "6",
+					"order": "8",
+					"text": "客户详情页",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "83",
+					"parent": "6",
+					"order": "9",
+					"text": "房源详情页",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "84",
+					"parent": "6",
+					"order": "10",
+					"text": "客户报备",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "85",
+					"parent": "6",
+					"order": "11",
+					"text": "预约看房",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "86",
+					"parent": "6",
+					"order": "12",
+					"text": "跟进记录",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "87",
+					"parent": "6",
+					"order": "13",
+					"text": "看房安排",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "88",
+					"parent": "6",
+					"order": "14",
+					"text": "添加求购客户",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "89",
+					"parent": "6",
+					"order": "15",
+					"text": "添加求租客户",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "90",
+					"parent": "6",
+					"order": "16",
+					"text": "添加出售房源",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				},{
+					"id": "91",
+					"parent": "6",
+					"order": "17",
+					"text": "添加出租房源",
+					"url": "/repaircar/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"6": {
+			"id": "7",
+			"parent": null,
+			"order": "6",
+			"text": "小区",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-area"
+			},
+			"children": [
+				{
+					"id": "70",
+					"parent": "7",
+					"order": "0",
+					"text": "安排出车",
+					"url": "/car/out/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"7": {
+			"id": "8",
+			"parent": null,
+			"order": "7",
+			"text": "装修管家",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-decorate"
+			},
+			"children": [
+				{
+					"id": "80",
+					"parent": "8",
+					"order": "0",
+					"text": "工资结算",
+					"url": "/salary/list/list",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"8": {
+			"id": "9",
+			"parent": null,
+			"order": "8",
+			"text": "度假管家",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-holiday"
+			},
+			"children": [
+				{
+					"id": "90",
+					"parent": "9",
+					"order": "0",
+					"text": "网站主题",
+					"url": "/maintain/theme",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"9": {
+			"id": "10",
+			"parent": null,
+			"order": "9",
+			"text": "问答",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-qa"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"10": {
+			"id": "11",
+			"parent": null,
+			"order": "10",
+			"text": "咨询",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-information"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"11": {
+			"id": "12",
+			"parent": null,
+			"order": "11",
+			"text": "微店",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-shop"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"12": {
+			"id": "13",
+			"parent": null,
+			"order": "12",
+			"text": "会员管理",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-member"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"13": {
+			"id": "14",
+			"parent": null,
+			"order": "13",
+			"text": "通讯录",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-address-list"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"14": {
+			"id": "15",
+			"parent": null,
+			"order": "14",
+			"text": "车辆管理",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-car-manage"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"15": {
+			"id": "16",
+			"parent": null,
+			"order": "15",
+			"text": "系统提醒",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-system"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"16": {
+			"id": "17",
+			"parent": null,
+			"order": "16",
+			"text": "应用中心",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-apply"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		},
+		"18": {
+			"id": "19",
+			"parent": null,
+			"order": "18",
+			"text": "数据统计",
+			"url": "",
+			"data": {
+				"li_class": "",
+				"a_class": "Back",
+				"i_class": "fa fa-data"
+			},
+			"children": [
+				{
+					"id": "100",
+					"parent": "10",
+					"order": "0",
+					"text": "基本设置",
+					"url": "/settings/primary",
+					"data": {
+						"li_class": "",
+						"a_class": "Back",
+						"i_class": "fa fa-circle-o"
+					}
+				}
+			]
+		}
+	},
+	"attr": {
+		"class": "layui-nav layui-nav-tree"
+	},
+	"prefix": "",
+	"suffix": ".html?iframe=true"
+}
